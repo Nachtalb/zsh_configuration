@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Reload configuration
+alias reload='source ~/.zshrc'
+
 # Python Virtualenvs
 alias ploneenv='source ~/venv/plone/bin/activate'
 alias aenv='source bin/activate'
