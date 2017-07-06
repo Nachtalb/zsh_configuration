@@ -22,13 +22,15 @@ alias Preview='/Applications/Preview.app/Contents/MacOS/Preview'
 
 # GIT
 alias gcu='echo -n `git remote show origin | grep "Fetch URL" | cut -d " " -f 5`|pbcopy'
+alias gca='git commit --all --amend --no-edit'
+alias grc='git rebase --continue'
 alias grm='git rebase -i master'
 alias glog='git log --graph'
 alias gpf='git push --force'
 alias gcp='git cherry-pick'
 alias gc='git commit -m'
 alias gco='git checkout'
-alias gib='git rebase -i'
+alias gri='git rebase -i'
 alias gst='git status'
 alias gp='git push'
 

@@ -1,0 +1,13 @@
+#!/bin/bash
+echo 'gcu  = echo -n `git remote show origin | grep "Fetch URL" | cut -d " " -f 5`|pbcopy
+gca  = git commit --all --amend --no-edit
+grc  = git rebase --continue
+grm  = git rebase -i master
+gpf  = git push --force
+gcp  = git cherry-pick
+glog = git log --graph
+gib  = git rebase -i
+gc   = git commit -m
+gco  = git checkout
+gst  = git status
+gp   = git push'
