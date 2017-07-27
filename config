@@ -1,13 +1,14 @@
-PATH="$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-PATH="$HOME/.bin:$HOME/.willgit/bin:$PATH"
-PATH="/Library/Frameworks/Python.framework/Versions/2.4.6/bin/:$PATH"
-PATH="/System/Library/Frameworks/Python.framework/Versions/2.4/bin/:$PATH"
+#PATH="$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+#PATH="$HOME/.bin:$HOME/.willgit/bin:$PATH"
+#PATH="/Library/Frameworks/Python.framework/Versions/2.4.6/bin/:$PATH"
+#PATH="/System/Library/Frameworks/Python.framework/Versions/2.4/bin/:$PATH"
 PATH="/Users/nickespig/.scripts/:$PATH"
 
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
 source ~/.zsh/aliases
+source ~/.zsh/servers
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
