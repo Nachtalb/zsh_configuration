@@ -79,10 +79,11 @@ if [ -d "$HOME/.rbenv/bin" ]; then
 fi
 
 # Initialise PYenv if available
-if [ -d "$HOME/.pyenv/bin" ]; then
-    export PATH="/home/bernd/.pyenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+if [ -d "$PYENV_ROOT" ]; then
+    export PATH="$PYENV_ROOT/bin:$PATH"
+
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
 
@@ -115,4 +116,3 @@ zstyle ':completion:*' insert-tab false
 unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
-
