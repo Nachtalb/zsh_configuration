@@ -1,38 +1,29 @@
 #!/bin/zsh
 
-# Reload configuration
-alias reload='source ~/.zshrc'
-
 # Python Virtualenvs
 alias ploneenv='source ~/venv/plone/bin/activate'
 alias aenv='source bin/activate'
 
-# Plone buildout and instance
+# Plone
 alias pinf='bin/instance fg'
 alias pin='bin/instance'
 alias pbo='bin/buildout'
+alias fakemail='sudo python /Users/nickespig/.zsh/scripts/fakemail.py --path "/Users/nickespig/Projects/mails/" --background --open --port 25 --log "/Users/nickespig/Projects/mails/fakemail.log"'
+alias cleanup-versions='python /Users/nickespig/.zsh/scripts/cleanup_versions.py'
+
+# Solr
+alias solr='/Users/nickespig/solr-6.0.0/bin/solr'
 
 # Basic Builtin
-alias la='ls -l -A'
-alias ls='ls -Gh'
-alias ll='ls -l'
-alias grep='grep --color'
+alias ls='ls -hC'
+alias la='ls -lAp'
+alias lt='ls -lAtp'
+alias ll='la'
 alias rmf='rm -rf'
 alias rsynca='rsync -rtvpl'
-# Search in files in current path
-function greps() {
-    if [ -n "$1" ] # or better, if [ -n "$1" ]
-    then
-	grep -rn -A3 -B3 $2 -e $1
-    else
-        grep -rn -A3 -B3 . -e $1
-    fi
-}
-
 
 # Applications
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias Preview='/Applications/Preview.app/Contents/MacOS/Preview'
+alias preview='/Applications/Preview.app/Contents/MacOS/Preview'
 
 # GIT
 alias gcu='echo -n `git remote show origin | grep "Fetch URL" | cut -d " " -f 5`|pbcopy'
@@ -42,24 +33,14 @@ alias grm='git rebase -i master'
 alias glog='git log --graph'
 alias gpf='git push --force'
 alias gcp='git cherry-pick'
-alias gc='git commit -m'
+alias gc='git commit -S -m'
 alias gco='git checkout'
 alias gri='git rebase -i'
+alias gra='git rebase --abort'
 alias gst='git status'
 alias gp='git push'
-
-# Automatically add "/.." if you type more the two dots. This means it goes
-# from this ".." to this "../..". Like this you can fast change to a parent directory.
-
-rationalise-dot() {
-if [[ $LBUFFER = *.. ]]; then
-    LBUFFER+=/..
-else
-    LBUFFER+=.
-fi
-}
-zle -N rationalise-dot
-bindkey . rationalise-dot
+alias gsa='git stash'
+alias gsp='git stash pop'
 
 # Misc
 alias fsize='du -sh'
@@ -87,3 +68,10 @@ alias -s gif=preview
 
 alias -s php=php
 alias -s py=python
+
+alias -s zcml=sublime
+alias -s txt=sublime
+alias -s rst=sublime
+alias -s md=sublime
+alias -s ini=sublime
+alias -s cfg=sublime

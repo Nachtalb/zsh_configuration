@@ -1,5 +1,7 @@
+#!/bin/zsh
+
 if [ ! -f buildout.cfg ]; then
-    ln -s development.cfg buildout.cfg
+    ln -s development_nick.cfg buildout.cfg
 fi
 python2.7 bootstrap.py
 bin/buildout
