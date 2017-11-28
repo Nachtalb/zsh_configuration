@@ -74,7 +74,7 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status background_jobs virtualenv custom_python_version root_indicator context dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time ssh time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time)
 
 # load all functions from the functions folder
 export PATH="$HOME/.zsh/functions:$PATH"
