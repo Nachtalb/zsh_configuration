@@ -32,7 +32,7 @@ export PYTHONSTARTUP=~/.pythonrc
 export ZSH="$HOME/.oh-my-zsh"
 
 # Load all plugins before we load `oh my zsh` to ensure that everything works correctly
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting last-working-dir pip python sublime web-search ssh-agent gpg-agent)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting last-working-dir pip python sublime ssh-agent gpg-agent)
 
 # start "oh my zsh"
 source "$ZSH/oh-my-zsh.sh"
