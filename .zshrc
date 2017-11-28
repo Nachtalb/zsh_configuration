@@ -79,12 +79,8 @@ if [ -d "$HOME/.rbenv/bin" ]; then
 fi
 
 # Initialise PYenv if available
-export PYENV_ROOT="$HOME/.pyenv"
-if [ -d "$PYENV_ROOT" ]; then
-    export PATH="$PYENV_ROOT/bin:$PATH"
-
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+if [ -f ".python-version" ]; then
+    source pyenv-init
 fi
 
 # OpenSSL Missing Fix
