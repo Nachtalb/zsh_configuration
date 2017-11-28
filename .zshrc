@@ -4,6 +4,9 @@
 #    General Config     #
 # # # # # # # # # # # # #
 
+# Support 256 colors
+export TERM="xterm-256color"
+
 # Add Paths
 PATH="$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 
