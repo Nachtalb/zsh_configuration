@@ -1,8 +1,9 @@
 #!/bin/zsh
 
-# Python Virtualenvs
+# Python
 alias ploneenv='source ~/venv/plone/bin/activate'
 alias aenv='source bin/activate'
+alias plist='pip list --format=columns'
 
 # Plone
 alias pinf='bin/instance fg'
