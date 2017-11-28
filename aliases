@@ -41,6 +41,8 @@ alias gst='git status'
 alias gp='git push --signed="if-asked"'
 alias gsa='git stash'
 alias gsp='git stash pop'
+alias gpl='git pull'
+alias gfa='git fetch --all'
 
 # Misc
 alias fsize='du -sh'
