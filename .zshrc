@@ -10,15 +10,6 @@ export TERM="xterm-256color"
 # Add Paths
 PATH="$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 
-# Get current python version
-zsh_python_version(){
-    local PYTHON_VERSION=$(python --version 2>&1 | sed 's/[a-zA-Z ]//g')
-    echo ${PYTHON_VERSION}
-}
-
-# Add a `custom_python_version` prompt element for powerlevel9k theme
-POWERLEVEL9K_CUSTOM_PYTHON_VERSION="zsh_python_version"
-
 # With this the username at the start of the line in the console is removed
 DEFAULT_USER=nickespig
 
@@ -32,7 +23,7 @@ export PYTHONSTARTUP=~/.pythonrc
 export ZSH="$HOME/.oh-my-zsh"
 
 # Load all plugins before we load `oh my zsh` to ensure that everything works correctly
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting last-working-dir pip python sublime ssh-agent gpg-agent)
+plugins=(git zsh-syntax-highlighting last-working-dir pip python sublime ssh-agent gpg-agent osx pyenv python rsync thefuck zsh_reload)
 
 # start "oh my zsh"
 source "$ZSH/oh-my-zsh.sh"
@@ -65,15 +56,12 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000
 
-# More readable color for zsh-autosuggest
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
-
 # Information shown on the left and right side of the console input
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status background_jobs virtualenv custom_python_version root_indicator context dir dir_writable vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(pyenv dir dir_writable)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time)
 
 # load all functions from the functions folder
@@ -83,11 +71,6 @@ export PATH="$HOME/.zsh/functions:$PATH"
 if [ -d "$HOME/.rbenv/bin" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
-fi
-
-# Initialise PYenv if available
-if [ -f ".python-version" ]; then
-    source pyenv-init
 fi
 
 # OpenSSL Missing Fix

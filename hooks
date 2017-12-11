@@ -2,10 +2,6 @@
 
 # CD hook to show folder content and pwd on cd except the $HOME directory
 function on_cd_hook() {
-    if [ -f ".python-version" ] && [ ! -d "$PYENV_ROOT" ]; then
-        source pyenv-init
-    fi
-
     emulate -L zsh
     if [ "$HOME" != "${PWD}" ]; then
         la
