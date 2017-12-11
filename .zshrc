@@ -11,7 +11,7 @@ export TERM="xterm-256color"
 PATH="$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 
 # With this the username at the start of the line in the console is removed
-DEFAULT_USER=nickespig
+DEFAULT_USER=bernd
 
 # Set theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
