@@ -73,10 +73,11 @@ if [ -d "$HOME/.rbenv/bin" ]; then
   eval "$(rbenv init -)"
 fi
 
-# OpenSSL Missing Fix
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+# OpenSSL Missing and libxml fix
+export LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/opt/libxml2/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include -I/usr/local/opt/libxml2/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig /usr/local/opt/libxml2/lib/pkgconfig"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 # Use vim as default editor
 export VISUAL=vim
@@ -90,7 +91,6 @@ fi
 export LC_ALL=de_CH.utf-8
 export LANG=de_CH.utf-8
 export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 # Homebrew GIT Token
 export HOMEBREW_GITHUB_API_TOKEN="401921d0991756e6d879e554dc75f509d680e97f"
