@@ -67,16 +67,17 @@ def quit(reason=None):
 
 
 log_file = None
+background = False
 
 
 def message(text):
-    global log_file
+    global log_file, background
+    if not background:
+        print text
     if log_file is not None:
         f = file(log_file, "a")
         f.write(text + "\n")
         f.close()
-    else:
-        print text
 
 
 def handle_signals():
@@ -89,7 +90,7 @@ def handle_signals():
 
 
 def read_command_line():
-    global log_file
+    global log_file, background
     try:
         optlist, args = getopt.getopt(sys.argv[1:], "",
             ["host=", "port=", "path=", "log=", "background",
@@ -101,7 +102,6 @@ def read_command_line():
     host = "localhost"
     port = 8025
     path = os.getcwd()
-    background = False
     open_mail = False
     for opt, arg in optlist:
         if opt == "--host":
