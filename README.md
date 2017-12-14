@@ -40,3 +40,9 @@ Mac iTerm2 Terminal
     Replace `[username]` with you current users name. Like this the you
     remove the `username@computername` on the left side of your input.
 4. Install the iTerm2 profile located in `~/.zsh/iTerm2-Profile/`
+
+5. Install git-open: 
+    ```
+    git clone https://github.com/paulirish/git-open.git ~/.oh-my-zsh/custom/plugins/git-open
+    ```
+

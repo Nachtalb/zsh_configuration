@@ -23,7 +23,7 @@ export PYTHONSTARTUP=~/.pythonrc
 export ZSH="$HOME/.oh-my-zsh"
 
 # Load all plugins before we load `oh my zsh` to ensure that everything works correctly
-plugins=(git zsh-syntax-highlighting last-working-dir pip python sublime ssh-agent gpg-agent osx pyenv python rsync thefuck zsh_reload)
+plugins=(git zsh-syntax-highlighting last-working-dir pip python sublime ssh-agent gpg-agent osx pyenv python rsync thefuck zsh_reload git-open)
 
 # start "oh my zsh"
 source "$ZSH/oh-my-zsh.sh"
