@@ -47,6 +47,7 @@ alias gfa='git fetch --all'
 
 # Misc
 alias fsize='du -sh'
+alias f='fuck'  # shortcut for https://github.com/nvbn/thefuck
 
 #Extensions
 alias -s pdf=preview
