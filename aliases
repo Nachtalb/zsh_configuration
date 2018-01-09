@@ -21,6 +21,7 @@ alias lt='ls -lAtp'
 alias ll='la'
 alias rmf='rm -rf'
 alias rsynca='rsync -rtvpl'
+alias rtws="gsed -i 's/[ \t]*$//' $1"
 
 # Applications
 alias preview='/Applications/Preview.app/Contents/MacOS/Preview'
