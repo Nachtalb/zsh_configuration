@@ -93,7 +93,7 @@ export LANG=de_CH.utf-8
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 # Homebrew GIT Token
-export HOMEBREW_GITHUB_API_TOKEN="401921d0991756e6d879e554dc75f509d680e97f"
+export HOMEBREW_GITHUB_API_TOKEN="c3932190c2f2963370ae6ce9bfc9163e0f2d3899"
 
 # Disable tab key if there is no autocompletion available
 zstyle ':completion:*' insert-tab false
