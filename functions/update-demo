@@ -1,3 +1,0 @@
-#!/bin/zsh
-cd /User/nickespig/Projects/plone_projects/demo.web
-sed -i '' -E '/^ftw\.|^plonetheme\.blueberry/d' versions.cfg
